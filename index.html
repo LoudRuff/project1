@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lamborghini | Super Sports Cars</title>
+
+  <style>
+    :root {
+      --primary: #000000;
+      --accent: #f5c400;
+      --text-light: #ffffff;
+      --text-gray: #cccccc;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background-color: var(--primary);
+      color: var(--text-light);
+      line-height: 1.6;
+    }
+
+    /* NAVBAR */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      position: sticky;
+      top: 0;
+      background: rgba(0,0,0,0.9);
+      z-index: 10;
+    }
+
+    header h1 {
+      color: var(--accent);
+      font-size: 24px;
+      letter-spacing: 2px;
+    }
+
+    nav a {
+      color: var(--text-light);
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    /* HERO */
+    .hero {
+      height: 90vh;
+      background: url("https://images.unsplash.com/photo-1542362567-b07e54358753") center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      padding: 40px;
+    }
+
+    .hero-content {
+      max-width: 600px;
+    }
+
+    .hero h2 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      color: var(--text-gray);
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      padding: 12px 30px;
+      background: var(--accent);
+      color: #000;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 4px;
+    }
+
+    /* MODELS SECTION */
+    .models {
+      padding: 60px 40px;
+    }
+
+    .models h3 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 32px;
+    }
+
+    .model-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .model-card {
+      background: #111;
+      border-radius: 8px;
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+
+    .model-card:hover {
+      transform: translateY(-8px);
+    }
+
+    .model-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .model-card div {
+      padding: 20px;
+    }
+
+    .model-card h4 {
+      margin-bottom: 10px;
+      color: var(--accent);
+    }
+
+    .model-card p {
+      font-size: 14px;
+      color: var(--text-gray);
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: #050505;
+      font-size: 13px;
+      color: var(--text-gray);
+    }
+
+    /* RESPONSIVE TEXT */
+    @media (max-width: 600px) {
+      .hero h2 {
+        font-size: 34px;
+      }
+      header {
+        flex-direction: column;
+      }
+      nav {
+        margin-top: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>LAMBORGHINI</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Models</a>
+      <a href="#">Brand</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Drive Beyond Limits</h2>
+      <p>
+        Experience precision engineering, bold design, and extreme performance.
+        Built for those who dare to stand apart.
+      </p>
+      <a href="#" class="btn">Explore Models</a>
+    </div>
+  </section>
+
+  <section class="models">
+    <h3>Featured Models</h3>
+    <div class="model-grid">
+
+      <div class="model-card">
+        <img src="https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2" alt="Lamborghini Model">
+        <div>
+          <h4>V12 Performance</h4>
+          <p>Pure power and aerodynamic excellence combined into a bold driving experience.</p>
+        </div>
+      </div>
+
+      <div class="model-card">
+        <img src="https://images.unsplash.com/photo-1614200187524-dc4b892acf16" alt="Lamborghini Interior">
+        <div>
+          <h4>Luxury Interior</h4>
+          <p>Premium materials, advanced technology, and driver-focused design.</p>
+        </div>
+      </div>
+
+      <div class="model-card">
+        <img src="https://images.unsplash.com/photo-1628519592419-bf288f08cef5" alt="Lamborghini Side View">
+        <div>
+          <h4>Iconic Design</h4>
+          <p>Sharp lines and unmistakable style that define modern supercars.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    © 2026 Lamborghini-inspired demo site. Educational use only.
+  </footer>
+
+</body>
+</html>
